@@ -1,0 +1,88 @@
+
+{%extends 'layout.html'%}
+{%block content%}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<br>
+<br>
+<div class="row m-4" >
+    <div class="col-4" style="margin-left:400px;">
+        <div class="login-blue p-3 shadow-lg rounded">
+            <center><b>{%if d%}
+                {{d}}
+                {%endif%}</b></center>
+            <div class="pt-3">
+               <center><h2 class="text-white ">LOGIN</h2></center> 
+            </div>
+
+            <form class="mt-5" method="post">
+                <div class="form-group">
+                    <input type="email" 
+                        class="form-control form-control-sm bg-light" 
+                        placeholder="Email Id" name="username">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" 
+                        class="form-control form-control-sm bg-light" 
+                        placeholder="Password" name="password">
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberCheckBox">
+                    <label class="form-check-label text-light" for="rememberCheckBox">Remember me?</label>
+                </div>
+
+                <div class="mt-5">
+                    <button class="btn btn-sm btn-light col" type="submit">
+                        Login
+                    </button>
+                </div>
+
+                <!-- <div class="text-center mt-2">
+                    <a href="#" class="text-warning">Forgot Password?</a> -->
+                </div>
+                
+                <div class="mt-5">
+                    <!-- <p class="text-white text-center">
+                        Don't have an account?
+                        <a href="#" class="text-warning">Click here to register</a>
+                    </p> -->
+                </div>
+            </form>
+        </div>
+    </div>
+    
+   
+<style>
+    .login-card-purple {
+    background: linear-gradient(145deg, #673AB7, #9C27B0);
+}
+
+.login-card-yellow {
+    background: linear-gradient(145deg, #FFC107, #FFEB3B);
+}
+
+.login-card-light {
+    background: linear-gradient(145deg, #eee, #fff);
+}
+
+.login-dark {
+    background: linear-gradient(145deg, #575b5d, #252b2d);
+}
+
+.login-blue {
+    background: linear-gradient(145deg, #2196F3, #3F51B5);
+}
+
+.login-purple-pink {
+    background: linear-gradient(145deg, #3F51B5, #E91E63);
+}
+
+body {
+    font-size: 13px;
+}
+</style>
+
+{%endblock%}

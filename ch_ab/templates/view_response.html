@@ -1,0 +1,97 @@
+{% extends 'user_layout.html' %}
+{% block content %}
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <!-- <h3>The columns titles are merged with the filters inputs thanks to the placeholders attributes</h3> -->
+    <hr>
+    <!-- <p>Inspired by this <a href="http://bootsnipp.com/snippets/featured/panel-tables-with-filter">snippet</a></p> -->
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Response</h3>
+                <!-- <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div> -->
+            </div>
+
+            {%if t%}
+                <h2 style="margin-left:450px;"> {{t}}</h2> 
+            {%else%}
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Response by</th>
+                        <th>Response</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                        
+                    </tr>
+                    {% for i in r %}
+                    {% for j in i.respond_id %}
+                    
+                    <tr>
+                        <td>{{j.name}}</td>
+                        <td>{{i.response}}</td>
+                        <td>{{i.status_res}}</td>
+                        <td>{{i.progress}}</td>
+
+                        
+                    </tr>
+                    {% endfor %}
+                    {% endfor %}
+                   
+                </tbody>
+            </table>{%endif%}
+        </div>
+    </div>
+</div>
+
+<style>
+    .filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
+}
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+</style>
+
+{% endblock  %}
+
+
+
+
+

@@ -1,0 +1,33 @@
+
+{%extends 'c_layout.html'%}
+{%block content%}
+
+    <section class="w3l-contact-11 py-5" id="contact">
+        <div class="container py-md-5 py-4">
+            
+            <div class="form-inner-cont mx-auto" style="max-width:800px">
+                <form  method="post" class="signin-form">
+                    <div class="row align-form-map">
+                        
+                        <div class="form-input">
+                            <textarea placeholder="Response" name="response" id="response"></textarea>
+                        </div>
+
+                        <div class="col-sm-6 form-input">
+                            <input type="text" name="status_res" id="status" placeholder="Status">
+                        </div>
+                        <div class="col-sm-6 form-input">
+                            <input type="text" name="progress" id="progress" placeholder="Progress">
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="submit text-right">
+                        <button type="submit" class="btn btn-style">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    {%endblock%}

@@ -1,0 +1,102 @@
+{% extends 'admin_layout.html' %}
+{% block content %}
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <!-- <h3>The columns titles are merged with the filters inputs thanks to the placeholders attributes</h3> -->
+    <hr>
+    <!-- <p>Inspired by this <a href="http://bootsnipp.com/snippets/featured/panel-tables-with-filter">snippet</a></p> -->
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Issues</h3>
+                
+            </div>
+            <table class="table">
+               
+                <tbody>
+                    
+                    <tr>
+                       
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Class</th>
+                        <th>Division</th>
+                        <th>Gender</th>
+                        <th>Subject</th>
+                        <th>Issue</th>
+                        <th>Contact</th>
+                        <th>Response</th>
+                      
+                      
+                    </tr>
+                    {% for i in obj %}
+                    
+                    <tr>
+                        <td>{{i.name}}</td>
+                        <td>{{i.address}}</td>
+                        <td>{{i.cls}}</td>
+                        <td>{{i.division}}</td>
+                        <td>{{i.gender}}</td>
+                        <td>{{i.subject}}</td>
+                        <td>{{i.issue}}</td>
+                        <td>{{i.contact}}</td>
+                        
+                        <td class="text-center"><a class='btn btn-success btn-xs' href="/his_res_d/{{i.id}}"><span class="glyphicon glyphicon-edit"></span>Response</a></td>
+                   
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
+}
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+</style>
+
+{% endblock  %}
+
+
+
+
+

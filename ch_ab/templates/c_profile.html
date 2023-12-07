@@ -1,0 +1,41 @@
+{% extends 'c_layout.html' %}
+{% block content %}
+
+                        <div class="col-sm-6 position-relative">
+                            <span class="image-block">
+                            <a class="image-zoom" href="../static/pics/{{d.image}}" rel="prettyPhoto[gallery]" style="height: 1000px;width: 1500px;">
+                               <figure>
+                                  <img src="../static/pics/{{d.image}}" class="img-fluid" alt="" style="height: 350px;width: 1200px;">
+                                  <figcaption>
+                                     
+                                  </figcaption>
+                               </figure>
+                            </a>
+                         </span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card-body blog-details align-self pl-sm-0">
+                                <a href="#blog" class="blog-desc">{{d.name}}
+                                </a>
+                                <h2>
+                                <p>Address: {{d.address}}</p>
+                                <p>Email: {{d.username}}</p>
+                                <p>Contact: {{d.contact}}</p>
+                                <p>Official Address: {{d.offaddress}}</p>
+                                <p>Qualification: {{d.qualification}}</p>
+                                
+                            </h2>
+                                <div class="d-flex align-items-center justify-content-between mt-lg-4 mt-5">
+                                    <a href="/c_profile_update/{{d.id}}" class="theme-button btn-outline-primary btn mt-lg-5 mt-4">Update Profile</a>
+                                    <!-- <a href="#blog" class="blog-icon-e"><i class="fas fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</div>
+{% endblock  %}

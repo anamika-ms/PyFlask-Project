@@ -1,0 +1,70 @@
+
+{%extends 'user_layout.html'%}
+{%block content%}
+
+    <!-- inner banner -->
+  
+    <!-- //inner banner -->
+
+    <!-- contact section -->
+    <section class="w3l-contact-11 py-5" id="contact">
+        <div class="container py-md-5 py-4">
+            <h3 class="title-style text-center mb-5"><span>Contact </span> Us</h3>
+            <div class="row text-center mb-5 pb-lg-5 pb-sm-4">
+                <div class="col-lg-3 col-sm-6 contact-info">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Location</h4>
+                    <p>London, 235 Terry, 10001</p>
+                </div>
+                <div class="col-lg-3 col-sm-6 contact-info mt-md-0 mt-4">
+                    <i class="fas fa-headset"></i>
+                    <h4>Phone</h4>
+                    <p><a href="tel:+44 987 654 321">+44 123 984 439</a></p>
+                </div>
+                <div class="col-lg-3 col-sm-6 contact-info mt-lg-0 mt-4">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h4>Email</h4>
+                    <p><a href="mailto:mail@example.com" class="email">mail@example.com</a></p>
+                </div>
+                <div class="col-lg-3 col-sm-6 contact-info mt-lg-0 mt-4">
+                    <i class="fas fa-user-clock"></i>
+                    <h4>Working Hours</h4>
+                    <p>24 Hours</p>
+                </div>
+            </div>
+            <div class="form-inner-cont mx-auto" style="max-width:800px">
+                <form method="post" class="signin-form">
+                    <div class="row align-form-map">
+                        <div class="col-sm-6 form-input">
+                            <input type="text" name="name" id="w3lName" placeholder="Name" value="{{d.name}}">
+                        </div>
+                        <div class="col-sm-6 form-input">
+                            <input type="email" name="email" id="w3lSender" placeholder="Email" required="" value="{{d.username}}">
+                        </div>
+                        <div class="col-sm-6 form-input">
+                            <input type="text" name="subject" placeholder="Subject" class="contact-input">
+                        </div>
+                        <div class="col-sm-6 form-input">
+                            <input type="number" name="contact" placeholder="Phone Number" class="contact-input" value="{{d.contact}}">
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <textarea placeholder="Message" name="message" id="w3lMessage" required=""></textarea>
+                    </div>
+                    <div class="submit text-right">
+                        <button type="submit" class="btn btn-style">Submit
+                            Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- map -->
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
+            width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
+    </div>
+    <!-- //contact section -->
+
+    {%endblock%}

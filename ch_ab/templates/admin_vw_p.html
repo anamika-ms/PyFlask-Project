@@ -1,0 +1,123 @@
+{%extends 'admin_layout.html'%}
+{%block content%}
+
+
+
+<style>
+	    #custom-search-form {
+        margin:0;
+        margin-top: 5px;
+        padding: 0;
+    }
+ 
+    #custom-search-form .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transition: width  0.2s ease-in-out;
+    -moz-transition:width  0.2s ease-in-out;
+    -o-transition: width  0.2s ease-in-out;
+    transition: width  0.2s ease-in-out;
+    }
+ 
+    #custom-search-form button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }   
+    .search-query:focus{
+        width: 260px;
+    }   
+
+</style>
+
+
+<section class="w3l-team py-5">
+    <div class="container py-md-5 py-4">
+        <h3 class="title-style text-center mb-5">Meet Our <span>Policers</span></h3>
+        <div class="row text-center">
+            <div class="container" style="margin-left: 350px; width:1500px; height:100px;">
+                <div class="row">
+            
+                    <div class="span12">
+                        <form  method="GET" class="d-flex search-header">
+                            <input class="form-control" type="text" name="search" placeholder="Search Here.." aria-label="Search" required="">
+                            <button class="btn btn-style" type="submit"><i class="fas fa-search"></i></button>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            {% for i in obj %}
+
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="team-block-single">
+                    <div class="team-grids">
+                        <a href="#team-single">
+                            <span class="image-block">
+                                <a class="image-zoom" href="../static/pics/{{i.image}}" rel="prettyPhoto[gallery]" style="height: 1000px;width: 1500px;">
+                                   <figure>
+                                      <img src="../static/pics/{{i.image}}" class="img-fluid" alt="" style="height: 350px;width: 1200px;">
+                                      <figcaption>
+                                         
+                                      </figcaption>
+                                   </figure>
+                                </a>
+                             </span>                            <div class="team-info">
+                                <div class="social-icons-section">
+                                    <a class="btn btn-primary" href="/user_book_counslr/{{i.id}}">
+                                        Book Now</a>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-bottom-block p-4">
+                        <h5 class="member mb-1">{{i.name}}</h5>
+                       <p>Address: {{i.address}}</p>
+                            <p>Email: {{i.username}}</p>
+                            <p>Contact: {{i.contact}}</p>
+                            <p>Official Address: {{i.offaddress}}</p>
+                            <p>Qualification: {{i.qualification}}</p>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            
+            {% endfor %} 
+        </div>
+    </div>
+</section>
+
+{%endblock%}
+
+
+
+
+
+

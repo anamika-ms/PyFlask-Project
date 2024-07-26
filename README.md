@@ -37,7 +37,7 @@ The back-end functionality is built on the Python Flask framework, ensuring a ro
 These modules collectively contribute to the holistic approach of Shelter, ensuring that various stakeholders can actively participate in the reporting and resolution of child abuse cases while maintaining confidentiality and security.
 
 ### Getting Started:
-1. **Clone the repository:** `git clone https://github.com/Anamika-Maker-Ctrl/ChildAbuseReporter.git`
+1. **Clone the repository:** `git clone https://github.com/anamika-ms/ChildAbuseReporter.git`
 2. **Install required dependencies:** `pip install -r requirements.txt`
 3. **Run the Flask development server:** `flask run ch_ab.py`
 
